@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <stdexcept>
-
 using namespace std;
 
 class Traitement {
@@ -21,7 +20,7 @@ public:
             if (cin.fail() || nombre % 2 != 0 || nombre == 0) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Erreur : veuillez entrer un entier pair non nul.\n";
+                cout << "Erreur : veuillez entrer un entier pair non nul." << endl;
                 --i;
             } else {
                 vecteur.push_back(nombre);
@@ -34,7 +33,7 @@ public:
             cout << vecteur[index] << " ";
             show(index + 1);
         } else if (index == 0) {
-            cout << "Le vecteur est vide.\n";
+            cout << "Le vecteur est vide." << endl;
         }
     }
 
@@ -62,15 +61,12 @@ public:
 
 int main() {
     Traitement t;
-    
     t.Initialiser();
-    
     cout << "Contenu du vecteur : ";
     t.show();
-    cout << "\n";
-
-    cout << "Moyenne du vecteur : " << moyenne(t) << "\n";
-    cout << "Médiane du vecteur : " << mediane(t) << "\n";
+    cout << endl;
+    cout << "Moyenne du vecteur : " << moyenne(t) << endl;
+    cout << "Médiane du vecteur : " << mediane(t) << endl;
 
     return 0;
 }
