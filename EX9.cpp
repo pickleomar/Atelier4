@@ -46,3 +46,13 @@ public:
         cout << endl;
     }
 };
+int main() {
+    liste maliste;
+    maliste.ajouter(3);
+    maliste.ajouter(2);
+    maliste.ajouter(1);
+    maliste.afficher();  // Affiche: 1 2 3
+    maliste.supprimer();
+    maliste.afficher();  // Affiche: 2 3
+    return 0;
+}
